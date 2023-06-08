@@ -2,24 +2,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --primary: blue;
+    --primary: blue;
+    --default-header-height: 60px;
+    --default-header-width: 1150px;
 }
 
 * {
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-  font-size: 62.5%;
+    font-size: 62.5%;
 }
 
 body {
-  font-family: "Geologica", sans-serif;
-  font-size: 1.6rem;
-  line-height: 1.5;
-  text-rendering: optimizeSpeed;
+    font-family: "Geologica", sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
 }
 
 h1 {
-  color: var(--primary);
+    color: var(--primary);
 }
