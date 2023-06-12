@@ -18,10 +18,14 @@
     justify-content: space-between;
 }
 
-.logo {
-}
-.search {
+.search,
+.search-results {
     width: 500px;
+}
+
+
+
+.search {
     height: var(--search-height);
     background-color: rgba(22, 24, 35, 0.06);
     border-radius: 92px;
@@ -87,4 +91,12 @@
         background: rgba(22, 24, 35, 0.06);
         color: var(--black);
     }
+}
+
+.search-title {
+    padding: 5px 12px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: rgba(22, 24, 35, 0.5);
+    line-height: 20px;
 }
