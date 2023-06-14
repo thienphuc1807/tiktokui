@@ -8,9 +8,11 @@ import {
     faCircleXmark,
     faSpinner,
     faMagnifyingGlass,
+    faPlus,
 } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 import AccountItems from "~/component/AccountItems";
+import Button from "~/component/Button";
 const cx = classNames.bind(styles);
 console.log(images);
 function Header() {
@@ -38,7 +40,9 @@ function Header() {
                             {...attrs}
                         >
                             <PopperWrapper>
-                                <h4 className={cx("search-title")}>Tài khoản</h4>
+                                <h4 className={cx("search-title")}>
+                                    Tài khoản
+                                </h4>
                                 <AccountItems />
                                 <AccountItems />
                                 <AccountItems />
@@ -61,7 +65,12 @@ function Header() {
                         </button>
                     </div>
                 </Tippy>
-                <div className={cx("action")}></div>
+                <div className={cx("action")}>
+                    <Button text leftIcon={<FontAwesomeIcon icon={faPlus} />}>
+                        Tải lên
+                    </Button>
+                    <Button primary>Đăng nhập</Button>
+                </div>
             </div>
         </header>
     );
