@@ -8,9 +8,10 @@
     border: 1px solid transparent;
     background-color: var(--white);
     user-select: none;
+    display: flex;
 
     + .wrapper {
-        margin-left: 8px;
+        margin-left: 16px;
     }
 
     &.disabled {
@@ -22,6 +23,12 @@
 .icon + .title,
 .title + .icon {
     margin-left: 8px;
+}
+
+.icon{
+    display: inline-block;
+    width: 20px;
+    text-align: center;
 }
 // Button types
 

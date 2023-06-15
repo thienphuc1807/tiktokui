@@ -98,3 +98,23 @@
 .custom-btn{
     color: rgba(22, 24, 35, .75);
 }
+
+.action {
+    display: flex;
+    align-items: center;
+}
+
+.more-btn{
+    margin-left: 16px;
+    background-color: var(--white);
+    padding: 0 4px;
+    cursor: pointer;
+}
+
+.more-icon{
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+
