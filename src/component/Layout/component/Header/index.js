@@ -23,6 +23,19 @@ const menuItems = [
     {
         icon: <FontAwesomeIcon icon={faGlobe} />,
         title: "Tiếng Việt",
+        children: {
+            title: "Language",
+            data: [
+                {
+                    code: "en",
+                    title: "English",
+                },
+                {
+                    code: "vi",
+                    title: "Tiếng Việt",
+                },
+            ],
+        },
     },
     {
         icon: <FontAwesomeIcon icon={faCircleQuestion} />,
@@ -38,6 +51,10 @@ const menuItems = [
         title: "Chế độ tối",
     },
 ];
+
+const handleMenuChange = (item) => {
+    console.log(item);
+};
 function Header() {
     return (
         <header className={cx("wrapper")}>
@@ -84,7 +101,7 @@ function Header() {
                         Tải lên
                     </Button>
                     <Button primary>Đăng nhập</Button>
-                    <Menu items={menuItems}>
+                    <Menu items={menuItems} onChange={handleMenuChange}>
                         <button className={cx("more-btn")}>
                             <FontAwesomeIcon
                                 className={cx("more-icon")}
