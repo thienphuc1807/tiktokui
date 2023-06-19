@@ -7,12 +7,12 @@
     --search-height: 46px;
     --search-top-spacer: 9px;
     --search-button-width: 52px;
+    padding: 0 var(--default-header-spacer);
 }
 
 .inner {
     height: 100%;
-    width: var(--default-header-width);
-    // width: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -21,6 +21,10 @@
 .search,
 .search-results {
     width: 500px;
+}
+
+.logo{
+    min-width: 200px;
 }
 
 
