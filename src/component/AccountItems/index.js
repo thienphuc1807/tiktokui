@@ -8,7 +8,7 @@ function AccountItems() {
         <div className={cx("wrapper")}>
             <img
                 className={cx("avatar")}
-                src="https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/dddda1f919f62b7ed22fec5e6be9c449~c5_100x100.jpeg?x-expires=1686704400&x-signature=8REpfV%2FbiF%2FdahLH7V9lebC2NNM%3D"
+                src="https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/dddda1f919f62b7ed22fec5e6be9c449~c5_100x100.jpeg?x-expires=1687482000&x-signature=z9%2BfxWkqb77354BNayBpmheucN8%3D"
                 alt="ThienPhuc"
             />
             <div className={cx("info")}>

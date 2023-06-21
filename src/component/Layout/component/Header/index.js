@@ -1,9 +1,11 @@
 import classNames from "classnames/bind";
 import styles from "./Header.module.scss";
 import images from "~/assets/image";
-import Tippy from "@tippyjs/react/headless";
+import TippyHeadless from "@tippyjs/react/headless";
+import Tippy from "@tippyjs/react";
 import { Wrapper as PopperWrapper } from "~/component/Propper";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "tippy.js/dist/tippy.css";
 import {
     faCircleXmark,
     faSpinner,
@@ -14,6 +16,13 @@ import {
     faCircleQuestion,
     faKeyboard,
     faMoon,
+    faMessage,
+    faPaperPlane,
+    faUser,
+    faBookBookmark,
+    faCoins,
+    faGear,
+    faArrowRightFromBracket,
 } from "@fortawesome/free-solid-svg-icons";
 import AccountItems from "~/component/AccountItems";
 import Button from "~/component/Button";
@@ -52,9 +61,41 @@ const menuItems = [
     },
 ];
 
+const userMenuItems = [
+    {
+        icon: <FontAwesomeIcon icon={faUser} />,
+        title: "Xem hồ sơ",
+        to: "/user",
+    },
+    {
+        icon: <FontAwesomeIcon icon={faBookBookmark} />,
+        title: "Yêu thích",
+        to: "/favorite",
+    },
+    {
+        icon: <FontAwesomeIcon icon={faCoins} />,
+        title: "Nhận xu",
+        to: "/coin",
+    },
+    {
+        icon: <FontAwesomeIcon icon={faGear} />,
+        title: "Cài đặt",
+        to: "/settings",
+    },
+    ...menuItems,
+    {
+        icon: <FontAwesomeIcon icon={faArrowRightFromBracket} />,
+        title: "Đăng xuất",
+        to: "/logout",
+        separate: true,
+    },
+];
+
 const handleMenuChange = (item) => {
     console.log(item);
 };
+
+const currentUser = true;
 function Header() {
     return (
         <header className={cx("wrapper")}>
@@ -62,7 +103,7 @@ function Header() {
                 <div className={cx("logo")}>
                     <img src={images.logo} alt="Tiktoklogo" />
                 </div>
-                <Tippy
+                <TippyHeadless
                     interactive={true}
                     render={(attrs) => (
                         <div
@@ -95,19 +136,51 @@ function Header() {
                             <FontAwesomeIcon icon={faMagnifyingGlass} />
                         </button>
                     </div>
-                </Tippy>
+                </TippyHeadless>
                 <div className={cx("action")}>
                     <Button text leftIcon={<FontAwesomeIcon icon={faPlus} />}>
                         Tải lên
                     </Button>
-                    <Button primary>Đăng nhập</Button>
-                    <Menu items={menuItems} onChange={handleMenuChange}>
-                        <button className={cx("more-btn")}>
-                            <FontAwesomeIcon
-                                className={cx("more-icon")}
-                                icon={faEllipsisVertical}
+                    {currentUser ? (
+                        <>
+                            <Tippy content="Tin nhắn" placement="bottom">
+                                <button className={cx("action-btn")}>
+                                    <FontAwesomeIcon icon={faPaperPlane} />
+                                </button>
+                            </Tippy>
+                            <Tippy
+                                content="Hộp thư"
+                                placement="bottom"
+                                delay="0"
+                            >
+                                <button className={cx("action-btn")}>
+                                    <FontAwesomeIcon icon={faMessage} />
+                                </button>
+                            </Tippy>
+                        </>
+                    ) : (
+                        <>
+                            <Button primary>Đăng nhập</Button>
+                        </>
+                    )}
+                    <Menu
+                        items={currentUser ? userMenuItems : menuItems}
+                        onChange={handleMenuChange}
+                    >
+                        {currentUser ? (
+                            <img
+                                className={cx("avatar-menu")}
+                                src="https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/dddda1f919f62b7ed22fec5e6be9c449~c5_100x100.jpeg?x-expires=1687482000&x-signature=z9%2BfxWkqb77354BNayBpmheucN8%3D"
+                                alt="ThienPhuc"
                             />
-                        </button>
+                        ) : (
+                            <button className={cx("more-btn")}>
+                                <FontAwesomeIcon
+                                    className={cx("more-icon")}
+                                    icon={faEllipsisVertical}
+                                />
+                            </button>
+                        )}
                     </Menu>
                 </div>
             </div>

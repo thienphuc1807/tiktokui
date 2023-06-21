@@ -23,11 +23,9 @@
     width: 500px;
 }
 
-.logo{
+.logo {
     min-width: 200px;
 }
-
-
 
 .search {
     height: var(--search-height);
@@ -99,8 +97,8 @@
     line-height: 20px;
 }
 
-.custom-btn{
-    color: rgba(22, 24, 35, .75);
+.custom-btn {
+    color: rgba(22, 24, 35, 0.75);
 }
 
 .action {
@@ -108,17 +106,30 @@
     align-items: center;
 }
 
-.more-btn{
+.more-btn {
     margin-left: 16px;
     background-color: var(--white);
     padding: 0 4px;
     cursor: pointer;
 }
 
-.more-icon{
+.more-icon {
     width: 20px;
     height: 20px;
     display: block;
 }
 
+.avatar-menu {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-left: 24px;
+    cursor: pointer;
+}
 
+.action-btn {
+    font-size: 24px;
+    background-color: transparent;
+    margin-left: 24px;
+    cursor: pointer;
+}

@@ -28,10 +28,16 @@ function Menu({ children, items = [], onChange }) {
         });
     };
 
+    const handleOutOfHoverMenu = () => {
+        setHistory([history[0]]);
+    };
+
     return (
         <Tippy
+            onHide={handleOutOfHoverMenu}
             interactive={true}
-            visible
+            // visible
+            offset={[12, 8]}
             delay={[0, 500]}
             placement="bottom-end"
             render={(attrs) => (
