@@ -16,8 +16,6 @@ import {
     faCircleQuestion,
     faKeyboard,
     faMoon,
-    faMessage,
-    faPaperPlane,
     faUser,
     faBookBookmark,
     faCoins,
@@ -27,6 +25,8 @@ import {
 import AccountItems from "~/component/AccountItems";
 import Button from "~/component/Button";
 import Menu from "~/component/Propper/Menu";
+import { MessageIcon, MessageBoxIcon } from "~/component/Icon";
+import Images from "~/component/Images";
 const cx = classNames.bind(styles);
 const menuItems = [
     {
@@ -145,7 +145,7 @@ function Header() {
                         <>
                             <Tippy content="Tin nhắn" placement="bottom">
                                 <button className={cx("action-btn")}>
-                                    <FontAwesomeIcon icon={faPaperPlane} />
+                                    <MessageIcon />
                                 </button>
                             </Tippy>
                             <Tippy
@@ -154,7 +154,8 @@ function Header() {
                                 delay="0"
                             >
                                 <button className={cx("action-btn")}>
-                                    <FontAwesomeIcon icon={faMessage} />
+                                    <MessageBoxIcon />
+                                    <p className={cx("badge")}>1</p>
                                 </button>
                             </Tippy>
                         </>
@@ -168,10 +169,11 @@ function Header() {
                         onChange={handleMenuChange}
                     >
                         {currentUser ? (
-                            <img
+                            <Images
                                 className={cx("avatar-menu")}
-                                src="https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/dddda1f919f62b7ed22fec5e6be9c449~c5_100x100.jpeg?x-expires=1687482000&x-signature=z9%2BfxWkqb77354BNayBpmheucN8%3D"
+                                src={""}
                                 alt="ThienPhuc"
+                                // fallback={images.logo}
                             />
                         ) : (
                             <button className={cx("more-btn")}>
