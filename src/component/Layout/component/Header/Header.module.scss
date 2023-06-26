@@ -18,87 +18,6 @@
     justify-content: space-between;
 }
 
-.search,
-.search-results {
-    width: 500px;
-}
-
-.logo {
-    min-width: 200px;
-    width: 118px;
-    height: 42px;
-}
-
-.search {
-    height: var(--search-height);
-    background-color: rgba(22, 24, 35, 0.06);
-    border-radius: 92px;
-    display: flex;
-    position: relative;
-    border: 1.5px solid transparent;
-    &:focus-within {
-        border: 1.5px solid rgba(22, 24, 35, 0.12);
-    }
-
-    input {
-        flex: 1;
-        height: 100%;
-        background-color: transparent;
-        color: var(--black);
-        padding-left: 16px;
-        font-size: 1.6rem;
-        font-weight: 300;
-        caret-color: var(--primary);
-    }
-
-    &::after {
-        content: "";
-        position: absolute;
-        top: var(--search-top-spacer);
-        right: var(--search-button-width);
-        height: calc(var(--search-height) - var(--search-top-spacer) * 2);
-        background-color: rgba(22, 24, 35, 0.12);
-        width: 1px;
-    }
-
-    input:not(:placeholder-shown) ~ .search-btn {
-        cursor: pointer;
-        background: rgba(22, 24, 35, 0.06);
-        color: var(--black);
-    }
-}
-.loading,
-.clear-btn {
-    position: absolute;
-    right: calc(var(--search-button-width) + 16px);
-    top: 50%;
-    transform: translateY(-50%);
-    color: rgba(22, 24, 35, 0.4);
-}
-
-.search-btn {
-    height: 100%;
-    width: var(--search-button-width);
-    border-top-right-radius: 92px;
-    border-bottom-right-radius: 92px;
-    color: rgba(22, 24, 35, 0.4);
-    font-size: 2rem;
-    padding-right: 6px;
-    &:hover {
-        cursor: pointer;
-        background: rgba(22, 24, 35, 0.06);
-        color: var(--black);
-    }
-}
-
-.search-title {
-    padding: 5px 12px;
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: rgba(22, 24, 35, 0.5);
-    line-height: 20px;
-}
-
 .custom-btn {
     color: rgba(22, 24, 35, 0.75);
 }
@@ -140,13 +59,13 @@
 
 .badge {
     position: absolute;
-    top: -5px;
-    right: -2px;
+    top: -4px;
+    left: 20px;
     font-size: 14px;
     color: var(--white);
     background-color: var(--primary);
-    border-radius: 50%;
+    border-radius: 10px;
     height: 20px;
-    width: 20px;
     font-weight: 600;
+    padding: 0 5px;
 }
