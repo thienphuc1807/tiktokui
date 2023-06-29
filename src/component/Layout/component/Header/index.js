@@ -21,7 +21,7 @@ import Button from "~/component/Button";
 import Menu from "~/component/Propper/Menu";
 import { MessageIcon, MessageBoxIcon } from "~/component/Icon";
 import Images from "~/component/Images";
-import Search from "./Search";
+import Search from "../Search";
 const cx = classNames.bind(styles);
 const menuItems = [
     {
