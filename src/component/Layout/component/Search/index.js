@@ -1,4 +1,5 @@
 import TippyHeadless from "@tippyjs/react/headless";
+// import axios from "axios";
 import { Wrapper as PopperWrapper } from "~/component/Propper";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -11,6 +12,10 @@ import classNames from "classnames/bind";
 import styles from "./Search.module.scss";
 import { useRef, useState, useEffect } from "react";
 import { useDebounce } from "~/component/Hooks";
+// import request from "~/utils/request";
+// import * as request from "~/utils/request";
+
+import { searchApi } from "~/apiServices/searchServices";
 const cx = classNames.bind(styles);
 
 function Search() {
@@ -27,20 +32,59 @@ function Search() {
             setSearchResult([]);
             return;
         }
-        setLoading(true);
-        fetch(
-            `https://tiktok.fullstack.edu.vn/api/users/search?q=${encodeURIComponent(
-                debounced
-            )}&type=less`
-        )
-            .then((res) => res.json())
-            .then((res) => {
-                setSearchResult(res.data);
-                setLoading(false);
-            })
-            .catch(() => {
-                setLoading(false);
-            });
+
+        const fetchApi = async () => {
+            setLoading(true);
+            const result = await searchApi(debounced);
+            setSearchResult(result);
+            setLoading(false);
+        };
+        fetchApi();
+
+        // const fetchApi = async () => {
+        //     try {
+        //         const res = await request.get("users/search", {
+        //             params: {
+        //                 q: debounced,
+        //                 type: "less",
+        //             },
+        //         });
+        //         setSearchResult(res.data);
+        //         setLoading(false);
+        //     } catch (error) {
+        //         setLoading(false);
+        //     }
+        // };
+        // fetchApi();
+
+        // request
+        //     .get("users/search", {
+        //         params: {
+        //             q: debounced,
+        //             type: "less",
+        //         },
+        //     })
+        //     .then((res) => {
+        //         setSearchResult(res.data);
+        //         setLoading(false);
+        //     })
+        //     .catch(() => {
+        //         setLoading(false);
+        //     });
+
+        // fetch(
+        //     `https://tiktok.fullstack.edu.vn/api/users/search?q=${encodeURIComponent(
+        //         debounced
+        //     )}&type=less`
+        // )
+        //     .then((res) => res.json())
+        //     .then((res) => {
+        //         setSearchResult(res.data);
+        //         setLoading(false);
+        //     })
+        //     .catch(() => {
+        //         setLoading(false);
+        //     });
     }, [debounced]);
 
     const handleClear = () => {
