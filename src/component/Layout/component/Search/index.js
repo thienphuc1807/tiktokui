@@ -105,45 +105,54 @@ function Search() {
     };
 
     return (
-        <TippyHeadless
-            interactive={true}
-            visible={showResult && searchResult.length > 0}
-            render={(attrs) => (
-                <div className={cx("search-results")} tabIndex="-1" {...attrs}>
-                    <PopperWrapper>
-                        <h4 className={cx("search-title")}>Tài khoản</h4>
-                        {searchResult.map((result) => (
-                            <AccountItems key={result.id} data={result} />
-                        ))}
-                    </PopperWrapper>
-                </div>
-            )}
-            onClickOutside={handleHideResult}
-        >
-            <div className={cx("search")}>
-                <input
-                    value={searchValue}
-                    placeholder="Tìm kiếm"
-                    ref={inputRef}
-                    onChange={handleSearch}
-                    onFocus={() => setShowResult(true)}
-                />
-                {!!searchValue && !loading && (
-                    <button className={cx("clear-btn")} onClick={handleClear}>
-                        <FontAwesomeIcon icon={faCircleXmark} />
-                    </button>
+        <div>
+            <TippyHeadless
+                interactive={true}
+                visible={showResult && searchResult.length > 0}
+                render={(attrs) => (
+                    <div
+                        className={cx("search-results")}
+                        tabIndex="-1"
+                        {...attrs}
+                    >
+                        <PopperWrapper>
+                            <h4 className={cx("search-title")}>Tài khoản</h4>
+                            {searchResult.map((result) => (
+                                <AccountItems key={result.id} data={result} />
+                            ))}
+                        </PopperWrapper>
+                    </div>
                 )}
-                {loading && (
-                    <FontAwesomeIcon
-                        className={cx("loading")}
-                        icon={faSpinner}
+                onClickOutside={handleHideResult}
+            >
+                <div className={cx("search")}>
+                    <input
+                        value={searchValue}
+                        placeholder="Tìm kiếm"
+                        ref={inputRef}
+                        onChange={handleSearch}
+                        onFocus={() => setShowResult(true)}
                     />
-                )}
-                <button className={cx("search-btn")}>
-                    <FontAwesomeIcon icon={faMagnifyingGlass} />
-                </button>
-            </div>
-        </TippyHeadless>
+                    {!!searchValue && !loading && (
+                        <button
+                            className={cx("clear-btn")}
+                            onClick={handleClear}
+                        >
+                            <FontAwesomeIcon icon={faCircleXmark} />
+                        </button>
+                    )}
+                    {loading && (
+                        <FontAwesomeIcon
+                            className={cx("loading")}
+                            icon={faSpinner}
+                        />
+                    )}
+                    <button className={cx("search-btn")}>
+                        <FontAwesomeIcon icon={faMagnifyingGlass} />
+                    </button>
+                </div>
+            </TippyHeadless>
+        </div>
     );
 }
 

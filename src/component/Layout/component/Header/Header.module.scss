@@ -2,7 +2,9 @@
     width: 100%;
     height: var(--default-header-height);
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px;
+    position: fixed;
     display: flex;
+    z-index: 10;
     justify-content: center;
     --search-height: 46px;
     --search-top-spacer: 9px;
