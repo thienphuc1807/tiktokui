@@ -4,10 +4,11 @@ import classNames from "classnames/bind";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import Images from "../Images";
 import { Link } from "react-router-dom";
+
 const cx = classNames.bind(styles);
 function AccountItems({ data }) {
     return (
-        <Link to={`/@${data.nickname}`} className={cx("wrapper")}>
+        <Link to={`/profile/@${data.nickname}`} className={cx("wrapper")}>
             <Images
                 className={cx("avatar")}
                 src={data.avatar}

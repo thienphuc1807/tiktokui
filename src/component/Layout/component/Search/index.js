@@ -97,6 +97,13 @@ function Search() {
         setShowResult(false);
     };
 
+    const handleSearch = (e) => {
+        const searchValue = e.target.value;
+        if (!searchValue.startsWith(" ")) {
+            setSearchValue(searchValue);
+        }
+    };
+
     return (
         <TippyHeadless
             interactive={true}
@@ -118,9 +125,7 @@ function Search() {
                     value={searchValue}
                     placeholder="Tìm kiếm"
                     ref={inputRef}
-                    onChange={(e) => {
-                        setSearchValue(e.target.value);
-                    }}
+                    onChange={handleSearch}
                     onFocus={() => setShowResult(true)}
                 />
                 {!!searchValue && !loading && (

@@ -10,6 +10,10 @@
     padding: 0 var(--default-header-spacer);
 }
 
+.logo{
+    display: flex !important;
+}
+
 .inner {
     height: 100%;
     width: 100%;
