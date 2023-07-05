@@ -15,7 +15,7 @@ import { useDebounce } from "~/component/Hooks";
 // import request from "~/utils/request";
 // import * as request from "~/utils/request";
 
-import { searchApi } from "~/apiServices/searchServices";
+import { searchApi } from "~/services/searchService";
 const cx = classNames.bind(styles);
 
 function Search() {
