@@ -4,6 +4,7 @@ import classNames from "classnames/bind";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import Images from "../Images";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const cx = classNames.bind(styles);
 function AccountItems({ data }) {
@@ -28,4 +29,7 @@ function AccountItems({ data }) {
     );
 }
 
+AccountItems.propTypes = {
+    data: PropTypes.object.isRequired,
+};
 export default AccountItems;

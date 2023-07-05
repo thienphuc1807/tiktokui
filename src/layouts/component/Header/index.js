@@ -30,7 +30,7 @@ const menuItems = [
         icon: <FontAwesomeIcon icon={faGlobe} />,
         title: "Tiếng Việt",
         children: {
-            title: "Language",
+            title: "Ngôn ngữ",
             data: [
                 {
                     code: "en",
