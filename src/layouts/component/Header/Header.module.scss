@@ -9,10 +9,10 @@
     --search-height: 46px;
     --search-top-spacer: 9px;
     --search-button-width: 52px;
-    padding: 0 var(--default-header-spacer);
+    padding: 0 24px 0 16px;
 }
 
-.logo{
+.logo {
     display: flex !important;
 }
 
@@ -55,23 +55,26 @@
 }
 
 .action-btn {
-    font-size: 24px;
     background-color: transparent;
-    margin-left: 24px;
+    margin-left: 16px;
     cursor: pointer;
     display: flex;
     position: relative;
+    height: 32px;
+    width: 32px;
+    align-items: center;
 }
 
 .badge {
     position: absolute;
-    top: -4px;
-    left: 20px;
+    top: -20%;
+    left: 16px;
     font-size: 14px;
     color: var(--white);
     background-color: var(--primary);
     border-radius: 10px;
+    min-width: 20px;
     height: 20px;
     font-weight: 600;
-    padding: 0 5px;
+    // padding: 0 5px;
 }

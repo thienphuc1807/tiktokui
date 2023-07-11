@@ -119,7 +119,7 @@ function Header() {
                             >
                                 <button className={cx("action-btn")}>
                                     <MessageBoxIcon />
-                                    <p className={cx("badge")}>1</p>
+                                    <p className={cx("badge")}>10</p>
                                 </button>
                             </Tippy>
                         </>
