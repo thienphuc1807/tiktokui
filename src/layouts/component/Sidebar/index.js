@@ -12,6 +12,7 @@ import {
     ExploreIconActive,
     LiveIconActive,
 } from "~/component/Icon";
+import SideBarList from "~/component/SideBarList";
 const cx = classNames.bind(styles);
 function Sidebar() {
     return (
@@ -42,6 +43,7 @@ function Sidebar() {
                     title="LIVE"
                 />
             </Menu>
+            <SideBarList title="Các tài khoản đang follow" />
         </aside>
     );
 }

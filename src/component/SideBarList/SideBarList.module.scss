@@ -1,0 +1,55 @@
+.wrapper {
+    padding: 16px 0;
+    border-top: 1px solid #eee;
+}
+
+.title {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: #161823bf;
+    font-weight: 600;
+    padding: 0 8px;
+}
+
+.item {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.user-info {
+    margin-left: 1.2rem;
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.user-nickname {
+    font-size: 1.6rem;
+    line-height: 24px;
+    max-width: 145px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.username {
+    color: #161823bf;
+    font-size: 1.2rem;
+    line-height: 15px;
+    max-width: 145px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.see-all-btn {
+    padding: 0 8px;
+    margin-top: 8px;
+    cursor: pointer;
+    color: var(--primary);
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: 600;
+}
