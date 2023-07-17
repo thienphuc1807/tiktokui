@@ -2,15 +2,15 @@
     font-size: 1.6rem;
     border-radius: 4px;
     padding: 0 16px;
-    height: 36px;
-    line-height: 36px;
+    height: 40px;
+    line-height: 40px;
     font-weight: 700;
     cursor: pointer;
     border: 1px solid transparent;
     background-color: var(--white);
     user-select: none;
     display: flex;
-
+    align-items: center;
     + .wrapper {
         margin-left: 16px;
     }

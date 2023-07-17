@@ -4,6 +4,8 @@ import styles from "./SideBarList.module.scss";
 import Tippy from "@tippyjs/react/headless";
 import { Wrapper as PropperWrapper } from "~/component/Propper";
 import AccountInfo from "./AccountInfo/AccountInfo";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
 const cx = classNames.bind(styles);
 function SideBarListItem() {
@@ -24,7 +26,7 @@ function SideBarListItem() {
                 delay={[800, 0]}
                 render={renderPreview}
                 placement="bottom"
-                offset={[0 , -5]}
+                offset={[0, -5]}
             >
                 <div className={cx("item")}>
                     <img
@@ -33,7 +35,13 @@ function SideBarListItem() {
                         alt="ThienPhuc"
                     />
                     <div className={cx("user-info")}>
-                        <h2 className={cx("user-nickname")}>cikeyyy187</h2>
+                        <h2 className={cx("user-nickname")}>
+                            cikeyyy187
+                            <FontAwesomeIcon
+                                icon={faCheckCircle}
+                                className={cx("user-check")}
+                            />
+                        </h2>
                         <p className={cx("username")}>Thiên Phúc</p>
                     </div>
                 </div>

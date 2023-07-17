@@ -1,23 +1,29 @@
 .wrapper {
     width: 320px;
-    padding: 20px;
+    padding: 10px 20px;
 }
 
-.top-info {
+.header-info {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.follow-btn {
-    padding: 6px 16px;
-}
-
 .user-avatar {
-    width: 44px;
-    height: 44px;
+    width: 66px;
+    height: 66px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+.user-nickname{
+    display: flex;
+    align-items: center;
+}
+
+.icon-check{
+    margin-left: 4px;
+    color: #20d5ec;
 }
 
 .body-info {
@@ -25,7 +31,7 @@
     color: #161823;
 }
 
-.bottom-info {
+.footer-info {
     display: flex;
     margin-top: 8px;
 }
