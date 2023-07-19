@@ -1,5 +1,53 @@
 .wrapper {
-    width: 240px;
+    width: 232px;
     padding: 20px 0 26px 8px;
+}
 
+.footer-sidebar {
+    border-top: 1px solid #eee;
+}
+
+.link-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 16px 8px 8px 8px;
+}
+
+.link {
+    color: #16182380;
+    margin-left: 0 !important;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    margin-right: 6px;
+    margin-top: 5px;
+    padding: 0;
+    height: 16px;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+p.link {
+    cursor: pointer;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.more-wrapper {
+    padding: 15px 16px 20px;
+    width: fit-content;
+    max-width: 200px;
+}
+
+.more-link {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    display: block;
+    padding: 0;
+    &:hover {
+        color: var(--primary);
+    }
 }

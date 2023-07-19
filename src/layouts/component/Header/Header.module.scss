@@ -5,12 +5,15 @@
     position: fixed;
     display: flex;
     z-index: 10;
+    background-color: var(--white);
     justify-content: center;
     --search-height: 46px;
     --search-top-spacer: 9px;
     --search-button-width: 52px;
     padding: 0 24px 0 16px;
 }
+
+
 
 .logo {
     display: flex !important;

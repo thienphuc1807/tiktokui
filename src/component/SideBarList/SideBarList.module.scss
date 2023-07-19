@@ -5,10 +5,10 @@
 }
 
 .title {
-    font-size: 1.4rem;
-    line-height: 1.8rem;
-    color: #161823bf;
-    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+    color: #16182380;
+    font-weight: 400;
     padding: 0 8px;
 }
 
@@ -60,3 +60,17 @@
     line-height: 1.8rem;
     font-weight: 600;
 }
+
+.login {
+    margin: 16px 8px 0 8px;
+}
+
+.login-btn {
+    min-height: 48px;
+    font-size: 1.8rem;
+    padding: 0;
+    min-width: 100%;
+    justify-content: center;
+    font-weight: 600;
+}
+

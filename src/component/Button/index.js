@@ -68,6 +68,7 @@ Button.propTypes = {
     rounded: PropTypes.bool,
     disabled: PropTypes.bool,
     small: PropTypes.bool,
+    large: PropTypes.bool,
     to: PropTypes.string,
     href: PropTypes.string,
     className: PropTypes.string,
