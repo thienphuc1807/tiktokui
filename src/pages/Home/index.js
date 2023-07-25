@@ -1,5 +1,15 @@
+import VideoComponent from "~/component/VideoComponent";
+
 function Home() {
-    return <h2>Home page</h2>;
+    return (
+        <>
+            <VideoComponent />
+            <VideoComponent />
+            <VideoComponent />
+            <VideoComponent />
+            <VideoComponent />
+        </>
+    );
 }
 
 export default Home;

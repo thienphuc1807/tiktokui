@@ -1,0 +1,139 @@
+.container {
+    position: relative;
+    margin: 0px auto;
+    width: 692px;
+    min-width: 420px;
+    flex-shrink: 1;
+    display: flex;
+    padding: 20px 0;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    width: 624px;
+    flex: 1 1 624px;
+    margin-left: 12px;
+    margin-right: 144px;
+}
+
+.music-link {
+    display: flex;
+    align-items: center;
+}
+
+.user-avatar img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+}
+
+.follow-btn {
+    position: absolute;
+    right: 0;
+    border-radius: 2px !important;
+    min-width: 96px;
+    height: 36px !important;
+    justify-content: center;
+    font-weight: 400 !important;
+    top: 28px;
+}
+
+.description {
+    font-size: 1.6rem;
+    line-height: 21px;
+    letter-spacing: 0.03px;
+    word-break: break-word;
+    display: inline;
+}
+
+.video-wrapper {
+    margin-top: 10px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.video-container {
+    height: 530px;
+    width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.video-actions {
+    display: flex;
+    flex-direction: column;
+}
+
+.actions-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+.action-icon {
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    margin-top: 8px;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1618230f;
+    font-size: 24px;
+}
+
+.data {
+    color: #161823bf;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 700;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.author-nickname {
+    margin-right: 4px;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    display: inline-block;
+}
+
+.author-name {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.8rem;
+    display: inline-block;
+}
+
+.des-link {
+    margin-left: 4px;
+    display: inline-block;
+    color: #2b5db9;
+    cursor: pointer;
+    font-weight: 600;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.music-text {
+    margin-left: 4px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    cursor: pointer;
+    font-weight: 400;
+    & :hover {
+        text-decoration: underline;
+    }
+}
