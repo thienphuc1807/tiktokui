@@ -1,6 +1,16 @@
 .wrapper {
+    position: relative;
+    width: 232px;
+   
+}
+.container {
     width: 232px;
     padding: 20px 0 26px 8px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior-y: contain;
+    position: fixed;
+    height: 100vh;
 }
 
 .footer-sidebar {

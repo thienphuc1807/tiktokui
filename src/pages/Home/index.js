@@ -8,6 +8,12 @@ function Home() {
             <VideoComponent />
             <VideoComponent />
             <VideoComponent />
+            <VideoComponent />
+            <VideoComponent />
+            <VideoComponent />
+            <VideoComponent />
+            <VideoComponent />
+            <VideoComponent />
         </>
     );
 }
